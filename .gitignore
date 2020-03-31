@@ -9,3 +9,6 @@ obj/OregonTrail.csproj.nuget.g.targets
 obj/OregonTrail.csproj.nuget.g.props
 obj/OregonTrail.csproj.nuget.dgspec.json
 obj/OregonTrail.csproj.nuget.cache
+obj/Debug/netcoreapp3.1/OregonTrail.pdb
+obj/Debug/netcoreapp3.1/OregonTrail.exe
+obj/Debug/netcoreapp3.1/OregonTrail.dll
