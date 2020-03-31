@@ -6,11 +6,24 @@ namespace OregonTrail
     {
         public void Start()
         {
+            //check if user wants instructions
             if(instructions() == true)
             {
                 showInstructions();
             }
-            game();
+
+            //SETUP
+            X = -1;
+            K8=S4=F1=F2=M=M9=D3=0;
+
+            //start game
+            do
+            {
+                initialOxenTeam();
+                initialFood();
+                initialAmmo();
+                initialMisc();
+            } while(checkPurchases() == false);
         }
 
         private void showInstructions()
@@ -58,6 +71,8 @@ namespace OregonTrail
             log("WHEN ASKED TO ENTER MONEY AMOUNTS, DON'T USE A '$'.");
             log();
             log("GOOD LUCK!!!");
+            log();
+            log();
         }
 
         private bool instructions()
@@ -77,9 +92,69 @@ namespace OregonTrail
             return false;
         }
 
-        private void game()
+        private void initialOxenTeam()
         {
+            log("HOW MUCH DO YOU WANT TO SPEND ON YOUR OXEN TEAM");
+            Int32.TryParse(Console.ReadLine(), out int A);
+            if(A < 200)
+            {
+                log("NOT ENOUGH");
+                initialOxenTeam();
+            } 
+            else if(A > 300)
+            {
+                log("TOO MUCH");
+                initialOxenTeam();
+            }
+        }
 
+        private void initialFood()
+        {
+            log("HOW MUCH DO YOU WANT TO SPEND ON FOOD");
+            Int32.TryParse(Console.ReadLine(), out int F);
+            if(F < 0)
+            {
+                log("IMPOSSIBLE");
+                initialFood();
+            }
+        }
+
+        private void initialAmmo()
+        {
+            log("HOW MUCH DO YOU WANT TO SPEND ON AMMUNITION");
+            Int32.TryParse(Console.ReadLine(), out int B);
+            if(B < 0)
+            {
+                log("IMPOSSIBLE");
+                initialAmmo();
+            }
+        }
+
+        private void initialMisc()
+        {
+            log("HOW MUCH DO YOU WANT TO SPEND ON MISCELANEOUS SUPPLIES");
+            Int32.TryParse(Console.ReadLine(), out int M1);
+            if(M1 < 0)
+            {
+                log("IMPOSSIBLE");
+                initialMisc();
+            }
+        }
+
+        private bool checkPurchases()
+        {
+            T = 700 - A - F - B - C - M1;
+            if(T < 0)
+            {
+                log("YOU OVERSPENT--YOU ONLY HAD $700 TO SPEND.  BUY AGAIN");
+                return false;
+            }
+            else
+            {
+                B *= 50;
+                log($"AFTER ALL YOUR PURCHASES, YOU NOW HAVE {T} DOLLARS LEFT");
+                return true;
+            }
         }
 
         private void log()
