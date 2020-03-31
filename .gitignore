@@ -1,0 +1,11 @@
+bin
+obj/Debug/netcoreapp3.1/OregonTrail.csprojAssemblyReference.cache
+obj/Debug/netcoreapp3.1/OregonTrail.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp3.1/OregonTrail.assets.cache
+obj/Debug/netcoreapp3.1/OregonTrail.AssemblyInfoInputs.cache
+obj/Debug/netcoreapp3.1/OregonTrail.AssemblyInfo.cs
+obj/project.assets.json
+obj/OregonTrail.csproj.nuget.g.targets
+obj/OregonTrail.csproj.nuget.g.props
+obj/OregonTrail.csproj.nuget.dgspec.json
+obj/OregonTrail.csproj.nuget.cache
