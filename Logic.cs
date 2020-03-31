@@ -10,11 +10,7 @@ namespace OregonTrail
             {
                 showInstructions();
             }
-            else
-            {  
-                game();
-            }
-            
+            game();
         }
 
         private void showInstructions()
@@ -95,5 +91,35 @@ namespace OregonTrail
         {
             Console.WriteLine(text);
         }
+
+        //global variables (NOT HOW I WOULD DO IT BUT THE REFERENCE IM USING USES IT)
+        int A; //AMOUNT SPENT ON ANIMALS
+        int B; //AMOUNT SPENT ON AMMUNITION
+        int B1; //ACTUAL RESPONSE TIME FOR INPUTING 'BANG'
+        int B2; //MAXIMUM RESPONSE TIME FOR INPUTING 'BANG'
+        int C; //AMOUNT SPENT ON CLOTHING
+        int C1; //FLAG FOR INSUFFICIENT CLOTHING IN COLD WEATHER
+        int D1; //COUNTER IN GENERATING EVENTS
+        int D3; //TURN NUMBER FOR SETTING DATE
+        int D4; //CURRENT DATE
+        int E; //CHOICE OF EATING
+        int F; //AMOUNT SPENT ON FOOD
+        int F1; //FLAG FOR CLEARING SOUTH PASS
+        int F2; //FLAG FOR CLEARING BLUE MOUNTAINS
+        int F9; //FRACTION OF 2 WEEKS TRAVELED ON FINAL TURN
+        int K8; //FLAG FOR INJURY
+        int L1; //FLAG FOR BLIZZARD
+        int M; //TOTAL MILEAGE WHOLE TRIP
+        int M1; //AMOUNT SPENT ON MISCELLANEOUS SUPPLIES
+        int M2; //TOTAL MILEAGE UP THROUGH PREVIOUS TURN
+        int M9; //FLAG FOR CLEARING SOUTH PASS IN SETTING MILEAGE
+        int P; //AMOUNT SPENT ON ITEMS AT FORT
+        int R1; //RANDOM NUMBER IN CHOOSING EVENTS
+        int S4; //FLAG FOR ILLNESS
+        int S5; //'HOSTILITY OF RIDERS' FACTOR
+        int T; //CASH LEFT OVER AFTER INITIAL PURCHASES
+        int T1; //CHOICE OF TACTICS WHEN ATTACKED
+        int X; //CHOICE OF ACTION FOR EACH TURN
+        int X1; //FLAG FOR FORT OPTION
     }
 }
